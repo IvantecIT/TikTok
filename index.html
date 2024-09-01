@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbuz Perni</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 20px 40px;
+            margin: 10px;
+            font-size: 24px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        #image, #map {
+            margin-top: 20px;
+            display: none;
+        }
+
+        #image img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        #map a {
+            font-size: 24px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1">Arbuz Perni</button>
+    <button id="button2">Do slobodi doedu</button>
+
+    <div id="image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Watermelon.jpg" alt="Арбуз">
+    </div>
+    <div id="map">
+        <a href="https://www.google.com/maps?q=Sloboda" target="_blank">Посмотреть Слободу на карте</a>
+    </div>
+
+    <script>
+        document.getElementById('button1').onclick = function() {
+            document.getElementById('image').style.display = 'block';
+            document.getElementById('map').style.display = 'none';
+        };
+
+        document.getElementById('button2').onclick = function() {
+            document.getElementById('map').style.display = 'block';
+            document.getElementById('image').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
